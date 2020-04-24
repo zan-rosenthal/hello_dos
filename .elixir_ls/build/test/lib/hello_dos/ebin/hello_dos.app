@@ -1,6 +1,6 @@
 {application,hello_dos,
              [{applications,[kernel,stdlib,elixir,logger,httpoison]},
               {description,"hello_dos"},
-              {modules,['Elixir.HelloDos']},
+              {modules,['Elixir.HelloDos','Elixir.Mix.Tasks.SpamRequests']},
               {registered,[]},
               {vsn,"0.1.0"}]}.
