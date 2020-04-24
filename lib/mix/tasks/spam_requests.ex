@@ -3,11 +3,6 @@ defmodule Mix.Tasks.SpamRequests do
 
   @shortdoc "Calls HelloDos.make_request/0 every three seconds"
   def run(_) do
-    :timer.apply_interval(
-      3000,
-      HelloDos,
-      :generate_fake_events,
-      []
-    )
+    HelloDos.generate_fake_events()
   end
 end

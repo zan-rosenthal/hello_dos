@@ -1,5 +1,5 @@
 {application,hello_dos,
-             [{applications,[kernel,stdlib,elixir,logger,httpoison]},
+             [{applications,[kernel,stdlib,elixir,logger,jason,httpoison]},
               {description,"hello_dos"},
               {modules,['Elixir.HelloDos','Elixir.Mix.Tasks.SpamRequests']},
               {registered,[]},
