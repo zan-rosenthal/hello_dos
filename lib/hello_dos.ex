@@ -1,11 +1,13 @@
 defmodule HelloDos do
   import IEx
+  use HTTPoison.Base
+
   def make_request(fake_event) do
-    { :ok, request_body } = Jason.encode(fake_event )
+    request_body = Jason.encode!(fake_event )
     IO.inspect(request_body)
 
     response =
-      HTTPoison.post("http://localhost:4000/notifications", "{\"body\": \"test\"}", [
+      HTTPoison.post("http://localhost:4000/notifications", request_body, [
         {"Content-Type", "application/json"}
       ])
 
